@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<style>
+    body {
+        background-image: url('sigma.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+<head>
+</head>
+
+<body>
+    <script>
+        window.addEventListener('load', (event) => {
+            const params = new URLSearchParams(window.location.search)
+            const locale = params.get('language')
+            const script = document.createElement('script');
+            script.setAttribute('data-api-key', "bc37f215-8f91-449c-87c5-bd0d1aa58739");
+            script.setAttribute('src', "https://solve-widget.forethought.ai/embed.js");
+            script.setAttribute('data-ft-locale', locale);
+            script.setAttribute('type', "application/javascript")
+            document.body.appendChild(script);
+        }); </script>
+</body>
+
+</html>
